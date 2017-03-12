@@ -57,7 +57,7 @@ test_data, test_targets = make_data(origin_image, origin_label)
 
 
 epoch_num = 50
-mini_batch_size = 50
+mini_batch_size = 20
 import nn3 as nn
 epoch_costs = []
 epoch_accuracy_train = []

@@ -29,7 +29,8 @@ targets = T.matrix('target')
 
 h = T.dot(input, w1) + b1
 h_a = 1 / (1 + T.exp(-h))
-# h_a = T.switch(h<0, 0, 1)
+# h_a = T.maximum(T.minimum(1,h), 0)
+# h_a = 0.5 * h + 0.5
 
 o = T.dot(h_a, w2) + b2
 o_a = 1 / (1 + T.exp(-o))
